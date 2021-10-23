@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Rdi-xg-utG">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-Ju-0hU">
+                                <rect key="frame" x="202" y="420" width="10" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-X6-ITn">
+                                <rect key="frame" x="192" y="448" width="30" height="30"/>
+                                <state key="normal" title="Clic"/>
+                                <connections>
+                                    <action selector="onContar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUV-ep-4j1"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b6x-2h-23d">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5g-3x-AIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Resetear" id="wWm-G9-wfi">
+                                                <connections>
+                                                    <action selector="onResetear:" destination="BYZ-38-t0r" id="gaq-cO-6tr"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEs-OC-zKv">
+                                <rect key="frame" x="186" y="335" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rdi-xg-utG" secondAttribute="bottom" constant="399" id="3T0-G1-yav"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Uh-X6-ITn" secondAttribute="bottom" constant="384" id="3gf-om-sHn"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8pk-GW-fCY"/>
+                            <constraint firstItem="b6x-2h-23d" firstAttribute="centerX" secondItem="zXq-Ju-0hU" secondAttribute="centerX" id="FBN-cW-eOe"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I15-mN-CUY"/>
+                            <constraint firstItem="6Uh-X6-ITn" firstAttribute="top" secondItem="zXq-Ju-0hU" secondAttribute="bottom" constant="7.5" id="IH2-hf-im8"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="trailing" secondItem="6Uh-X6-ITn" secondAttribute="trailing" id="Tfo-dD-MBh"/>
+                            <constraint firstItem="b6x-2h-23d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WJL-rY-aF1"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aA5-4f-Xca"/>
+                            <constraint firstItem="zXq-Ju-0hU" firstAttribute="centerX" secondItem="Rdi-xg-utG" secondAttribute="centerX" id="aKn-XM-2iC"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="leading" secondItem="6Uh-X6-ITn" secondAttribute="leading" id="abk-Ok-Ejt"/>
+                            <constraint firstItem="zXq-Ju-0hU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="202" id="dg2-RP-8ML"/>
+                            <constraint firstItem="b6x-2h-23d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h0m-mv-lKt"/>
+                            <constraint firstItem="Rdi-xg-utG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wRN-WM-nuo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblContador" destination="zXq-Ju-0hU" id="gG3-F1-oGk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
