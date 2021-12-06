@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isAuthenticate = false
     var plist = UserDefaults.standard
     var navController : UINavigationController?
+    
     
     func MainStoryBoard() -> UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -61,6 +63,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+            
+            //MARK: Firebase
+            FirebaseApp.configure()
             // MARK: si ya esta autenticado
             let usuario = plist.string(forKey: "usuario")
             if let usu = usuario {
@@ -76,6 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 OnLoginSuccess()
                 SetrootViewController(rootViewController: loginViewController, animate: true, tipo: 1)
             }
+            
             return true
         }
         
