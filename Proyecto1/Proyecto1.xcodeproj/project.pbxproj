@@ -22,6 +22,8 @@
 		58906AEE275D75B6001A069F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 58906AED275D75B6001A069F /* FirebaseAuth */; };
 		58906AF0275D75B6001A069F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 58906AEF275D75B6001A069F /* FirebaseFirestore */; };
 		58906AF2275D75B6001A069F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 58906AF1275D75B6001A069F /* FirebaseDatabase */; };
+		58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906AF4275E7848001A069F /* ModeloUsuario.swift */; };
+		58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906AF9275E7B5B001A069F /* Usuarios.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		58906AD1275AF3F7001A069F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlumnosTableViewController.swift; sourceTree = "<group>"; };
 		58906AE5275D7424001A069F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		58906AF4275E7848001A069F /* ModeloUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloUsuario.swift; sourceTree = "<group>"; };
+		58906AF9275E7B5B001A069F /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,19 +78,37 @@
 		58906AB8275AECCF001A069F /* Proyecto1 */ = {
 			isa = PBXGroup;
 			children = (
+				58906AF8275E7863001A069F /* Views */,
+				58906AF7275E7853001A069F /* Models */,
 				58906AE5275D7424001A069F /* GoogleService-Info.plist */,
 				58906AB9275AECCF001A069F /* AppDelegate.swift */,
 				58906ABB275AECCF001A069F /* SceneDelegate.swift */,
-				58906ABD275AECCF001A069F /* ViewController.swift */,
 				58906ABF275AECCF001A069F /* Main.storyboard */,
 				58906AC5275AECD0001A069F /* Assets.xcassets */,
 				58906AC7275AECD0001A069F /* LaunchScreen.storyboard */,
 				58906ACA275AECD0001A069F /* Info.plist */,
 				58906AC2275AECCF001A069F /* Proyecto1.xcdatamodeld */,
-				58906AD1275AF3F7001A069F /* LoginViewController.swift */,
-				58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */,
 			);
 			path = Proyecto1;
+			sourceTree = "<group>";
+		};
+		58906AF7275E7853001A069F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58906AF4275E7848001A069F /* ModeloUsuario.swift */,
+				58906AF9275E7B5B001A069F /* Usuarios.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		58906AF8275E7863001A069F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				58906AD1275AF3F7001A069F /* LoginViewController.swift */,
+				58906ABD275AECCF001A069F /* ViewController.swift */,
+				58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +195,8 @@
 				58906AC4275AECCF001A069F /* Proyecto1.xcdatamodeld in Sources */,
 				58906ABE275AECCF001A069F /* ViewController.swift in Sources */,
 				58906ABA275AECCF001A069F /* AppDelegate.swift in Sources */,
+				58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */,
+				58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */,
 				58906AD2275AF3F7001A069F /* LoginViewController.swift in Sources */,
 				58906AD5275AF72A001A069F /* AlumnosTableViewController.swift in Sources */,
 				58906ABC275AECCF001A069F /* SceneDelegate.swift in Sources */,
