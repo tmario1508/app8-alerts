@@ -36,18 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 } else {
                     window?.rootViewController = rootViewController
                 }
-                //MARK: Animacion
-                /*UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromRight, animations: {
-                    if tipo == 0 {
-                        rootViewController.title = "Vista"
-                        self.navController = UINavigationController(rootViewController: rootViewController)
-                        self.window?.rootViewController = rootViewController
-                        self.window?.makeKeyAndVisible()
-                    } else {
-                        self.window?.rootViewController = rootViewController
-                    }
-                    
-                }, completion: nil)*/
             } else {
                 if animate {
                     if (tipo == 0) {
@@ -86,6 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         func OnLoginSuccess(){
+            let usuario = plist.string(forKey: "usuario")
+            print("Login User: \(usuario)")
             let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Alumnos")
             SetrootViewController(rootViewController: viewController, animate: true, tipo: 0)
         }

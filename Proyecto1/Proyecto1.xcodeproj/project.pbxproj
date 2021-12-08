@@ -27,6 +27,7 @@
 		58906B0227612A62001A069F /* AltaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0127612A62001A069F /* AltaViewController.swift */; };
 		58906B0827612B8B001A069F /* ButtonSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0727612B8B001A069F /* ButtonSuccess.swift */; };
 		58906B0B27612C49001A069F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0A27612C49001A069F /* TextFieldInput.swift */; };
+		58906B0E27614B3E001A069F /* ButtonGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0D27614B3E001A069F /* ButtonGreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		58906B0127612A62001A069F /* AltaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltaViewController.swift; sourceTree = "<group>"; };
 		58906B0727612B8B001A069F /* ButtonSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSuccess.swift; sourceTree = "<group>"; };
 		58906B0A27612C49001A069F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
+		58906B0D27614B3E001A069F /* ButtonGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			children = (
 				58906B0727612B8B001A069F /* ButtonSuccess.swift */,
 				58906B0A27612C49001A069F /* TextFieldInput.swift */,
+				58906B0D27614B3E001A069F /* ButtonGreen.swift */,
 			);
 			name = Customs;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				58906B0227612A62001A069F /* AltaViewController.swift in Sources */,
 				58906ABA275AECCF001A069F /* AppDelegate.swift in Sources */,
 				58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */,
+				58906B0E27614B3E001A069F /* ButtonGreen.swift in Sources */,
 				58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */,
 				58906AD2275AF3F7001A069F /* LoginViewController.swift in Sources */,
 				58906AD5275AF72A001A069F /* AlumnosTableViewController.swift in Sources */,

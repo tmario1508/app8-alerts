@@ -17,6 +17,7 @@ class TextFieldInput: UITextField {
 
         func ConfigurarPropiedades() {
             self.borderStyle = .none
+            self.textColor = UIColor.red
             self.layer.borderColor = UIColor.blue.cgColor
             self.layer.borderWidth = 0.5
             self.layer.cornerRadius = 15

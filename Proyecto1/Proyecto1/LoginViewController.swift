@@ -10,6 +10,8 @@ import FirebaseCore
 import FirebaseFirestore
 
 class LoginViewController: UIViewController {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var plist = UserDefaults.standard
     let database = Firestore.firestore()
     var list = [Usuarios]()
     var usuario : String = ""
@@ -66,6 +68,8 @@ class LoginViewController: UIViewController {
             
         }
         if usuario == user && password == pass {
+            plist.set(usuario, forKey: "usuario")
+            appDelegate.OnLoginSuccess()
             //MARK: Crear una alerta
             let alerta = UIAlertController(title: "Inicio de sesión", message: "Inicio de sesion exitoso", preferredStyle: .alert)
             //MARK: Crear accion para la alerta

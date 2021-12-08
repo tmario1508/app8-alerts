@@ -15,6 +15,7 @@ class AltaViewController: UIViewController {
     //singleton
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
+    @IBOutlet weak var txtPass2: TextFieldInput!
     @IBOutlet weak var txtNombre: TextFieldInput!
     @IBOutlet weak var txtPass: TextFieldInput!
     @IBOutlet weak var txtUsuario: TextFieldInput!
@@ -26,6 +27,8 @@ class AltaViewController: UIViewController {
         let nombre = txtNombre.text!
         let correo = txtCorreo.text!
         let pass = txtPass.text!
+        let pass2 = txtPass2.text!
+        
         if nombre == "" || correo == "" || pass == "" || user == "" {
             //MARK: Crear una alerta
             let alerta = UIAlertController(title: "Campos obligatorios", message: "Favor de llenar todos los campos", preferredStyle: .alert)
@@ -36,7 +39,18 @@ class AltaViewController: UIViewController {
             //MARK: Presentar alerta
             present(alerta, animated: true, completion: nil)
         } else {
-            saveData(user: user, pass: pass, name: nombre, email: correo)
+            if pass == pass2 {
+                saveData(user: user, pass: pass, name: nombre, email: correo)
+            }else{
+                //MARK: Crear una alerta
+                let alerta = UIAlertController(title: "Contraseñas no coinciden", message: "Favor de verificar su contraseña", preferredStyle: .alert)
+                //MARK: Crear accion para la alerta
+                alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+                        (UIAlertAction) in //print("Usuario: \(user), Pass: \(pass)")
+                }))
+                //MARK: Presentar alerta
+                present(alerta, animated: true, completion: nil)
+            }
         }
         
     }
@@ -67,6 +81,7 @@ class AltaViewController: UIViewController {
             self.txtNombre.text = ""
             self.txtPass.text = ""
             self.txtCorreo.text = ""
+            self.txtPass2.text = ""
             }))
                 
         //MARK: Presentar alerta
