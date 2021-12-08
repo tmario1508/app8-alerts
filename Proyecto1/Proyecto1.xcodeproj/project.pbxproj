@@ -78,7 +78,7 @@
 		58906AB8275AECCF001A069F /* Proyecto1 */ = {
 			isa = PBXGroup;
 			children = (
-				58906AF8275E7863001A069F /* Views */,
+				58906AFE2760558D001A069F /* Vistas */,
 				58906AF7275E7853001A069F /* Models */,
 				58906AE5275D7424001A069F /* GoogleService-Info.plist */,
 				58906AB9275AECCF001A069F /* AppDelegate.swift */,
@@ -101,14 +101,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		58906AF8275E7863001A069F /* Views */ = {
+		58906AFE2760558D001A069F /* Vistas */ = {
 			isa = PBXGroup;
 			children = (
 				58906AD1275AF3F7001A069F /* LoginViewController.swift */,
 				58906ABD275AECCF001A069F /* ViewController.swift */,
 				58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */,
 			);
-			path = Views;
+			name = Vistas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

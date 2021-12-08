@@ -7,14 +7,15 @@
 
 import Foundation
 
-var lista : [EntidadUsuario] = []
+var listUsuarios : [EntidadUsuario] = []
 
 class EntidadUsuario {
-    init(usuario:String, pass: String) {
-        self.usuario =  usuario
+    init(id: String, user:String, pass: String) {
+        self.id = id
+        self.user =  user
         self.pass =  pass
     }
-    
-    var usuario : String = ""
+    var id : String = ""
+    var user : String = ""
     var pass : String = ""
 }
