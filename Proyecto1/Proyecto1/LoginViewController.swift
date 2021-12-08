@@ -12,16 +12,23 @@ import FirebaseFirestore
 class LoginViewController: UIViewController {
     let database = Firestore.firestore()
     var list = [Usuarios]()
+    var usuario : String = ""
+    var password : String = ""
 
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtPass: UITextField!
     
+    
+    
+    @IBAction func onRegistrar(_ sender: Any) {
+        
+    }
     @IBAction func onLogin(_ sender: Any) {
         let user:String = txtUser.text!
         let pass:String = txtPass.text!
         
         //saveData(user: user, pass: pass)
-        getData(user: user)
+        getData(user: user, pass: pass)
     }
     
     func saveData(user: String, pass: String) {
@@ -32,45 +39,52 @@ class LoginViewController: UIViewController {
         ])
     }
     
-    func getData(user: String) {
-        let coleccion = database.collection("maestros")
-        let datos = coleccion.whereField("user", isEqualTo: user)
+    func getData(user: String, pass: String) {
+        print("Datos recibidos en el constructor, User: \(user), Pass: \(pass)")
+        //let coleccion = database.collection("maestros")
+        //let datos = coleccion.whereField("user", isEqualTo: user)
         database.collection("maestros").document(user).getDocument() { snapshot, error in
             if let document = snapshot, error == nil {
                 if let user = document.get("user") as? String {
-                    self.txtUser.text = user
+                    self.usuario = user
                 }
                 if let pass = document.get("pass") as? String {
-                    self.txtPass.text = pass
+                    self.password = pass
+                }else{
+                    //MARK: Crear una alerta
+                    let alerta = UIAlertController(title: "Inicio de sesión", message: "No se pudo iniciar sesion, verifica usuario y contraseña", preferredStyle: .alert)
+                    //MARK: Crear accion para la alerta
+                    alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+                            (UIAlertAction) in print("Alerta sesin fallida, Usuario: \(user), Pass: \(pass)")
+                        }))
+                            
+                    //MARK: Presentar alerta
+                    self.present(alerta, animated: true, completion: nil)
                 }
+                
             }
             
-            /*
-            // Check for errors
-            if error == nil {
-                // No errors
-                
-                if let snapshot = snapshot {
+        }
+        if usuario == user && password == pass {
+            //MARK: Crear una alerta
+            let alerta = UIAlertController(title: "Inicio de sesión", message: "Inicio de sesion exitoso", preferredStyle: .alert)
+            //MARK: Crear accion para la alerta
+            alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+                    (UIAlertAction) in print("Usuario: \(user), Pass: \(pass)")
+                }))
                     
-                    // Update the list property in the main thread
-                    DispatchQueue.main.async {
-                        
-                        // Get all the documents and create Todos
-                        self.list = snapshot.documents.map { d in
-                            //let entidad = EntidadUsuario(user: d["user"] as? String, pass: d["pass"] as? String)
-                            // Create a Todo item for each document returned
-                            return Usuarios(id: d.documentID,
-                                        user: d["user"] as? String ?? "",
-                                        pass: d["pass"] as? String ?? "")
-                        }
-                    }
+            //MARK: Presentar alerta
+            present(alerta, animated: true, completion: nil)
+        }else {
+            //MARK: Crear una alerta
+            let alerta = UIAlertController(title: "Inicio de sesión", message: "No se pudo iniciar sesion, verifica usuario y contraseña", preferredStyle: .alert)
+            //MARK: Crear accion para la alerta
+            alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
+                    (UIAlertAction) in print("Usuario: \(user), Pass: \(pass)")
+                }))
                     
-                    
-                }
-            }
-            else {
-                // Handle the error
-            }*/
+            //MARK: Presentar alerta
+            present(alerta, animated: true, completion: nil)
         }
         //print("Usuarios: \(Usuarios)")
         

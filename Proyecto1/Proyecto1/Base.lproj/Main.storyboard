@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8Q-CX-BOC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8Q-CX-BOC">
                                 <rect key="frame" x="97" y="228" width="233" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -26,8 +26,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-tg-A8T">
-                                <rect key="frame" x="179" y="399" width="42" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-rj-AVs" customClass="ButtonSuccess" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="97" y="512" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Registrar Usuario"/>
+                                <connections>
+                                    <segue destination="9bD-Gt-dHI" kind="show" id="OME-7R-7Zm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZC7-tg-A8T" customClass="ButtonSuccess" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="97" y="399" width="42" height="30"/>
                                 <state key="normal" title="Entrar"/>
                                 <connections>
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UX2-9t-v3R"/>
@@ -37,7 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZC7-tg-A8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="179" id="0B0-Hu-QbB"/>
+                            <constraint firstItem="ZC7-tg-A8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="0B0-Hu-QbB"/>
                             <constraint firstItem="j8Q-CX-BOC" firstAttribute="leading" secondItem="PFO-71-5or" secondAttribute="leading" id="O0u-ph-ghx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j8Q-CX-BOC" secondAttribute="trailing" constant="84" id="Tcn-b9-Iif"/>
                             <constraint firstItem="PFO-71-5or" firstAttribute="top" secondItem="j8Q-CX-BOC" secondAttribute="bottom" constant="39" id="XHf-1a-zBz"/>
@@ -56,6 +64,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1442.0289855072465" y="79.6875"/>
+        </scene>
+        <!--Alta View Controller-->
+        <scene sceneID="J2a-Lt-249">
+            <objects>
+                <viewController id="9bD-Gt-dHI" customClass="AltaViewController" customModule="Proyecto1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3vg-GF-b2c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqq-vu-MPk" customClass="TextFieldInput" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="104" y="188" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iz2-2M-XDh" customClass="TextFieldInput" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="104" y="254" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJK-aU-59m" customClass="TextFieldInput" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="104" y="318" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKB-Rz-E1P" customClass="TextFieldInput" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="104" y="386" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXT-QG-ZIe" customClass="ButtonSuccess" customModule="Proyecto1" customModuleProvider="target">
+                                <rect key="frame" x="104" y="480" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Registrar"/>
+                                <connections>
+                                    <action selector="onAgregar:" destination="9bD-Gt-dHI" eventType="touchUpInside" id="EkC-T6-glh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="102-yP-Drj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Tq-a0-Cmo"/>
+                    <connections>
+                        <outlet property="txtCorreo" destination="Iz2-2M-XDh" id="8sX-Kw-onl"/>
+                        <outlet property="txtNombre" destination="hqq-vu-MPk" id="fXX-KZ-AAx"/>
+                        <outlet property="txtPass" destination="RKB-Rz-E1P" id="PCl-yS-y2Q"/>
+                        <outlet property="txtUsuario" destination="BJK-aU-59m" id="qeB-PZ-Hol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNU-TO-HXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.68115942029" y="718.52678571428567"/>
         </scene>
         <!--Alumnos Table View Controller-->
         <scene sceneID="HNb-Jc-9Nv">

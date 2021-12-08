@@ -24,6 +24,9 @@
 		58906AF2275D75B6001A069F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 58906AF1275D75B6001A069F /* FirebaseDatabase */; };
 		58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906AF4275E7848001A069F /* ModeloUsuario.swift */; };
 		58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906AF9275E7B5B001A069F /* Usuarios.swift */; };
+		58906B0227612A62001A069F /* AltaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0127612A62001A069F /* AltaViewController.swift */; };
+		58906B0827612B8B001A069F /* ButtonSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0727612B8B001A069F /* ButtonSuccess.swift */; };
+		58906B0B27612C49001A069F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0A27612C49001A069F /* TextFieldInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		58906AE5275D7424001A069F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58906AF4275E7848001A069F /* ModeloUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloUsuario.swift; sourceTree = "<group>"; };
 		58906AF9275E7B5B001A069F /* Usuarios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
+		58906B0127612A62001A069F /* AltaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltaViewController.swift; sourceTree = "<group>"; };
+		58906B0727612B8B001A069F /* ButtonSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSuccess.swift; sourceTree = "<group>"; };
+		58906B0A27612C49001A069F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		58906AB8275AECCF001A069F /* Proyecto1 */ = {
 			isa = PBXGroup;
 			children = (
+				58906B0527612B5B001A069F /* Customs */,
 				58906AFE2760558D001A069F /* Vistas */,
 				58906AF7275E7853001A069F /* Models */,
 				58906AE5275D7424001A069F /* GoogleService-Info.plist */,
@@ -107,8 +114,18 @@
 				58906AD1275AF3F7001A069F /* LoginViewController.swift */,
 				58906ABD275AECCF001A069F /* ViewController.swift */,
 				58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */,
+				58906B0127612A62001A069F /* AltaViewController.swift */,
 			);
 			name = Vistas;
+			sourceTree = "<group>";
+		};
+		58906B0527612B5B001A069F /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				58906B0727612B8B001A069F /* ButtonSuccess.swift */,
+				58906B0A27612C49001A069F /* TextFieldInput.swift */,
+			);
+			name = Customs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +211,15 @@
 			files = (
 				58906AC4275AECCF001A069F /* Proyecto1.xcdatamodeld in Sources */,
 				58906ABE275AECCF001A069F /* ViewController.swift in Sources */,
+				58906B0227612A62001A069F /* AltaViewController.swift in Sources */,
 				58906ABA275AECCF001A069F /* AppDelegate.swift in Sources */,
 				58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */,
 				58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */,
 				58906AD2275AF3F7001A069F /* LoginViewController.swift in Sources */,
 				58906AD5275AF72A001A069F /* AlumnosTableViewController.swift in Sources */,
+				58906B0B27612C49001A069F /* TextFieldInput.swift in Sources */,
 				58906ABC275AECCF001A069F /* SceneDelegate.swift in Sources */,
+				58906B0827612B8B001A069F /* ButtonSuccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
