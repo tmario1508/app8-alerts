@@ -27,58 +27,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func SetrootViewController(rootViewController: UIViewController, animate: Bool, tipo: Int) {
-            if animate {
-                if (tipo == 0) {
-                    rootViewController.title = "Vista"
-                    navController = UINavigationController(rootViewController: rootViewController)
-                    window?.rootViewController = rootViewController
-                    window?.makeKeyAndVisible()
-                } else {
-                    window?.rootViewController = rootViewController
-                }
+        if animate {
+            if (tipo == 0) {
+                rootViewController.title = "Vista"
+                navController = UINavigationController(rootViewController: rootViewController)
+                window?.rootViewController = navController
+                window?.makeKeyAndVisible()
             } else {
-                if animate {
-                    if (tipo == 0) {
-                        rootViewController.title = "Vista"
-                        navController = UINavigationController(rootViewController: rootViewController)
-                        window?.rootViewController = rootViewController
-                        window?.makeKeyAndVisible()
-                    } else {
-                        window?.rootViewController = rootViewController
-                    }
-                }
+                window?.rootViewController = rootViewController
+            }
+        } else {
+            if tipo == 0 {
+                rootViewController.title = "Vista"
+                navController = UINavigationController(rootViewController: rootViewController)
+                window?.rootViewController = navController
+                window?.makeKeyAndVisible()
+            } else {
+                window?.rootViewController = rootViewController
             }
         }
+            
+    }
 
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             
-            //MARK: Firebase
-            FirebaseApp.configure()
-            // MARK: si ya esta autenticado
-            let usuario = plist.string(forKey: "usuario")
-            if let usu = usuario {
-                if usu == "mario" {
-                    isAuthenticate = true
-                }
-            }
-            if isAuthenticate {
-                let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Alumnos")
-                SetrootViewController(rootViewController: viewController, animate: false, tipo: 0)
-            }else {
-                let loginViewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Login") as! LoginViewController
-                OnLoginSuccess()
-                SetrootViewController(rootViewController: loginViewController, animate: true, tipo: 1)
-            }
+        //MARK: Firebase
+        FirebaseApp.configure()
             
-            return true
+        // MARK: si ya esta autenticado
+        /*let usuario = plist.string(forKey: "usuario")
+        if let usu = usuario {
+            if usu == "mario" {
+                isAuthenticate = true
+            }
+        }*/
+            
+        if isAuthenticate {
+            let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "TablaAlumnos")
+            SetrootViewController(rootViewController: viewController, animate: false, tipo: 0)
+        }else {
+            let loginViewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Login") as! LoginViewController
+            OnLoginSuccess()
+            SetrootViewController(rootViewController: loginViewController, animate: true, tipo: 1)
         }
+            
+        return true
+    }
         
-        func OnLoginSuccess(){
-            let usuario = plist.string(forKey: "usuario")
-            print("Login User: \(usuario)")
-            let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Alumnos")
-            SetrootViewController(rootViewController: viewController, animate: true, tipo: 0)
-        }
+    func OnLoginSuccess(){
+        print("Pasa por aqui")
+        let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "TablaAlumnos")
+        SetrootViewController(rootViewController: viewController, animate: true, tipo: 0)
+    }
 
 }
 
