@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     @IBAction func onRegistrar(_ sender: Any) {
         
     }
+    
     @IBAction func onLogin(_ sender: Any) {
         let user:String = txtUser.text!
         let pass:String = txtPass.text!
@@ -43,54 +44,38 @@ class LoginViewController: UIViewController {
     
     func getData(user: String, pass: String) {
         print("Datos recibidos en el constructor, User: \(user), Pass: \(pass)")
-        //let coleccion = database.collection("maestros")
-        //let datos = coleccion.whereField("user", isEqualTo: user)
+
         database.collection("maestros").document(user).getDocument() { snapshot, error in
+            self.usuario = snapshot?.get("user") as! String
             if let document = snapshot, error == nil {
-                if let user = document.get("user") as? String {
+                self.usuario = document.get("user") as! String
+                self.password = document.get("pass") as! String
+                /*if let user = document.get("user") as? String {
                     self.usuario = user
                 }
                 if let pass = document.get("pass") as? String {
                     self.password = pass
-                }else{
+                }*/
+                print("Datos obtenidos de Firebase User: \(self.usuario) Pass: \(self.password)")
+                if self.usuario == user && self.password == pass {
+                    self.plist.set(self.usuario, forKey: "usuario")
+                    self.appDelegate.OnLoginSuccess()
+                }else {
                     //MARK: Crear una alerta
                     let alerta = UIAlertController(title: "Inicio de sesión", message: "No se pudo iniciar sesion, verifica usuario y contraseña", preferredStyle: .alert)
                     //MARK: Crear accion para la alerta
                     alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
-                            (UIAlertAction) in print("Alerta sesin fallida, Usuario: \(user), Pass: \(pass)")
+                            (UIAlertAction) in
+                            //print("Usuario: \(user), Pass: \(pass)")
                         }))
                             
                     //MARK: Presentar alerta
                     self.present(alerta, animated: true, completion: nil)
                 }
-                
             }
             
         }
-        if usuario == user && password == pass {
-            plist.set(usuario, forKey: "usuario")
-            appDelegate.OnLoginSuccess()
-            //MARK: Crear una alerta
-            let alerta = UIAlertController(title: "Inicio de sesión", message: "Inicio de sesion exitoso", preferredStyle: .alert)
-            //MARK: Crear accion para la alerta
-            alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
-                    (UIAlertAction) in print("Usuario: \(user), Pass: \(pass)")
-                }))
-                    
-            //MARK: Presentar alerta
-            present(alerta, animated: true, completion: nil)
-        }else {
-            //MARK: Crear una alerta
-            let alerta = UIAlertController(title: "Inicio de sesión", message: "No se pudo iniciar sesion, verifica usuario y contraseña", preferredStyle: .alert)
-            //MARK: Crear accion para la alerta
-            alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {
-                    (UIAlertAction) in print("Usuario: \(user), Pass: \(pass)")
-                }))
-                    
-            //MARK: Presentar alerta
-            present(alerta, animated: true, completion: nil)
-        }
-        //print("Usuarios: \(Usuarios)")
+        
         
     }
     

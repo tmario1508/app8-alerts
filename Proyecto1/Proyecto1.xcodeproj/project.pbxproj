@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58906ABA275AECCF001A069F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906AB9275AECCF001A069F /* AppDelegate.swift */; };
-		58906ABE275AECCF001A069F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906ABD275AECCF001A069F /* ViewController.swift */; };
 		58906AC1275AECCF001A069F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58906ABF275AECCF001A069F /* Main.storyboard */; };
 		58906AC4275AECCF001A069F /* Proyecto1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58906AC2275AECCF001A069F /* Proyecto1.xcdatamodeld */; };
 		58906AC6275AECD0001A069F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58906AC5275AECD0001A069F /* Assets.xcassets */; };
@@ -28,12 +27,15 @@
 		58906B0B27612C49001A069F /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0A27612C49001A069F /* TextFieldInput.swift */; };
 		58906B0E27614B3E001A069F /* ButtonGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B0D27614B3E001A069F /* ButtonGreen.swift */; };
 		58906B1127616586001A069F /* TextFieldLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B1027616586001A069F /* TextFieldLogin.swift */; };
+		58906B242761B386001A069F /* Utilidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B232761B386001A069F /* Utilidades.swift */; };
+		58906B272761B3CB001A069F /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B262761B3CB001A069F /* EditarViewController.swift */; };
+		58906B2B2761B729001A069F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B2A2761B729001A069F /* ViewController.swift */; };
+		58906B302761B900001A069F /* AltaAlumnoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58906B2F2761B900001A069F /* AltaAlumnoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58906AB6275AECCF001A069F /* Proyecto1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proyecto1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58906AB9275AECCF001A069F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58906ABD275AECCF001A069F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58906AC0275AECCF001A069F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58906AC3275AECCF001A069F /* Proyecto1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Proyecto1.xcdatamodel; sourceTree = "<group>"; };
 		58906AC5275AECD0001A069F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		58906B0A27612C49001A069F /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 		58906B0D27614B3E001A069F /* ButtonGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGreen.swift; sourceTree = "<group>"; };
 		58906B1027616586001A069F /* TextFieldLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLogin.swift; sourceTree = "<group>"; };
+		58906B232761B386001A069F /* Utilidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilidades.swift; path = ../../../ParteTere/appSQLITE/Utilidades.swift; sourceTree = "<group>"; };
+		58906B262761B3CB001A069F /* EditarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditarViewController.swift; path = ../../../ParteTere/appSQLITE/EditarViewController.swift; sourceTree = "<group>"; };
+		58906B2A2761B729001A069F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../ParteTere/appSQLITE/ViewController.swift; sourceTree = "<group>"; };
+		58906B2F2761B900001A069F /* AltaAlumnoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AltaAlumnoViewController.swift; path = ../../../ParteTere/appSQLITE/AltaAlumnoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		58906AF7275E7853001A069F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58906B232761B386001A069F /* Utilidades.swift */,
 				58906AF4275E7848001A069F /* ModeloUsuario.swift */,
 				58906AF9275E7B5B001A069F /* Usuarios.swift */,
 			);
@@ -112,8 +119,10 @@
 		58906AFE2760558D001A069F /* Vistas */ = {
 			isa = PBXGroup;
 			children = (
+				58906B2F2761B900001A069F /* AltaAlumnoViewController.swift */,
+				58906B2A2761B729001A069F /* ViewController.swift */,
+				58906B262761B3CB001A069F /* EditarViewController.swift */,
 				58906AD1275AF3F7001A069F /* LoginViewController.swift */,
-				58906ABD275AECCF001A069F /* ViewController.swift */,
 				58906AD4275AF72A001A069F /* AlumnosTableViewController.swift */,
 				58906B0127612A62001A069F /* AltaViewController.swift */,
 			);
@@ -212,14 +221,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58906B2B2761B729001A069F /* ViewController.swift in Sources */,
 				58906AC4275AECCF001A069F /* Proyecto1.xcdatamodeld in Sources */,
-				58906ABE275AECCF001A069F /* ViewController.swift in Sources */,
 				58906B0227612A62001A069F /* AltaViewController.swift in Sources */,
+				58906B242761B386001A069F /* Utilidades.swift in Sources */,
 				58906ABA275AECCF001A069F /* AppDelegate.swift in Sources */,
+				58906B272761B3CB001A069F /* EditarViewController.swift in Sources */,
 				58906AF5275E7848001A069F /* ModeloUsuario.swift in Sources */,
 				58906B1127616586001A069F /* TextFieldLogin.swift in Sources */,
 				58906B0E27614B3E001A069F /* ButtonGreen.swift in Sources */,
 				58906AFA275E7B5B001A069F /* Usuarios.swift in Sources */,
+				58906B302761B900001A069F /* AltaAlumnoViewController.swift in Sources */,
 				58906AD2275AF3F7001A069F /* LoginViewController.swift in Sources */,
 				58906AD5275AF72A001A069F /* AlumnosTableViewController.swift in Sources */,
 				58906B0B27612C49001A069F /* TextFieldInput.swift in Sources */,

@@ -10,6 +10,7 @@ import CoreData
 import Firebase
 
 @main
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -54,16 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: Firebase
         FirebaseApp.configure()
             
-        // MARK: si ya esta autenticado
-        /*let usuario = plist.string(forKey: "usuario")
-        if let usu = usuario {
-            if usu == "mario" {
-                isAuthenticate = true
-            }
-        }*/
             
         if isAuthenticate {
-            let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "TablaAlumnos")
+            let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Alumnos")
             SetrootViewController(rootViewController: viewController, animate: false, tipo: 0)
         }else {
             let loginViewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Login") as! LoginViewController
@@ -75,9 +69,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
         
     func OnLoginSuccess(){
-        print("Pasa por aqui")
-        let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "TablaAlumnos")
+        let viewController = GetViewController(storyboard: MainStoryBoard(), ViewControllerName: "Alumnos")
         SetrootViewController(rootViewController: viewController, animate: true, tipo: 0)
+    }
+    
+    // MARK: - Core Data stack
+
+    lazy var persistentContainer: NSPersistentContainer = {
+
+        let container = NSPersistentContainer(name: "appSQLITE")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    // MARK: - Core Data Saving support
+
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 
 }

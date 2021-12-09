@@ -82,6 +82,7 @@ class AltaViewController: UIViewController {
             self.txtPass.text = ""
             self.txtCorreo.text = ""
             self.txtPass2.text = ""
+            self.txtNombre.becomeFirstResponder()
             }))
                 
         //MARK: Presentar alerta
